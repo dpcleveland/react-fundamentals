@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack-dev-server --inline --hot --port 1234",
-    "production": "webpack -p"
+    "production": "webpack -p",
+    "test": "mocha test/index.test.js -w"
   },
   "author": "Tyler McGinnis <tylermcginnis33@gmail.com> (http://tylermcginnis.com)",
   "license": "ISC",
@@ -18,7 +19,9 @@
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
     "babel-preset-react": "^6.3.13",
+    "chai": "^3.5.0",
     "html-webpack-plugin": "^2.7.1",
+    "mocha": "^3.2.0",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.1"
   }
