@@ -10,11 +10,11 @@ function Prompt (props) {
         <form onSubmit={props.onSubmitUser}>
           <div className="form-group">
             <input
-              className="form-control"
-              placeholder="GitHub Username"
+              className='form-control'
               onChange={props.onUpdateUser}
-              value={props.username}
-              type="text" />
+              placeholder='Github Username'
+              type='text'
+              value={props.username} />
           </div>
           <div className="form-group col-sm-4 col-sm-offset-4">
             <button
@@ -28,11 +28,12 @@ function Prompt (props) {
     </div>
   )
 }
+
 Prompt.propTypes = {
-  header: PropTypes.string.isRequired,
-  onUpdateUser: PropTypes.func.isRequired,
   onSubmitUser: PropTypes.func.isRequired,
-  username: PropTypes.string.isRequired
+  onUpdateUser: PropTypes.func.isRequired,
+  header: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
 }
 
 module.exports = Prompt;
