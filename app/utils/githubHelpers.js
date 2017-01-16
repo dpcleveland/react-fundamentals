@@ -29,7 +29,8 @@ function getPlayersData (player) {
     .then(function (totalStars) {
       return {
         followers: player.followers,
-        totalStars: totalStars
+        totalStars: totalStars,
+        repos: player.public_repos
       }
     })
 }
@@ -37,8 +38,8 @@ function getPlayersData (player) {
 function calculateScores (players) {
   // return an array after doing fancy algorithms to determine a winner
   return [
-    players[0].followers * 3 + players[0].totalStars,
-    players[1].followers * 3 + players[1].totalStars
+    (players[0].followers + players[0].totalStars + players[0].repos) * 3,
+    (players[1].followers + players[1].totalStars + players[1].repos) * 3
   ]
 }
 
